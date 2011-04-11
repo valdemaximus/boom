@@ -19,12 +19,10 @@ $.extend(Map.prototype, {
 	this.h = height/this.tileSize;
 	
 	this.numTiles = this.w * this.h;
-	var d = Math.floor(this.tileSize/2);
 	for(var i=0; i<this.numTiles; i++) {
 	    var w = i%this.w;
 	    var h = Math.floor(i/this.w);
-	    this.tiles.push(new Tile(w*this.tileSize+d, h*this.tileSize+d, 0));
-	    console.log(w+","+h);
+	    this.tiles.push(new Tile(w*this.tileSize, h*this.tileSize, 0, tileSize));
 	}
     },
     
